@@ -15,3 +15,18 @@ nr_characters = int(input("How many characters would you like in your password?\
 upper_choice = input('Would you like uppercase characters? "Y" for Yes, "N" for No\n')
 numbers_choice = input('Would you like numbers? "Y" for Yes, "N" for No\n')
 symbols_choice = input('Would you like symbols? "Y" for Yes, "N" for No\n')
+
+char_list = lowercase
+
+if upper_choice.lower() == "y":
+    char_list += uppercase
+if numbers_choice.lower() == "y":
+    char_list += numbers
+if symbols_choice.lower() == "y":
+    char_list += symbols
+
+randomise_list = random.sample(char_list, len(char_list))
+
+p_length = 0
+
+password_result = []
