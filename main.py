@@ -30,3 +30,16 @@ randomise_list = random.sample(char_list, len(char_list))
 p_length = 0
 
 password_result = []
+
+while p_length < nr_characters:
+    p_length = p_length + 1
+    random.shuffle(randomise_list)
+    index_char = random.randint(0, len(char_list) + 1)
+    chosen_char = char_list[index_char - 1]
+    password_result += chosen_char
+
+password =""
+for char in password_result:
+  password += char
+
+print(f"Your new Password is: {password}")
